@@ -9,18 +9,20 @@
 
 body {
   overflow: hidden;
+  width: 100vw;
 }
 
 .pronunciation {
   font-size: 1.5em;
   color: red;
-  animation: marquee linear 36s infinite;
+  animation: marquee linear 30s infinite;
   display: inline-block;
 }
 
 #fun {
-  font-size: 1em;
-  animation: marquee linear 3s reverse infinite;
+  font-size: 1.5em;
+  display: inline-block;
+  animation: marquee linear 10s reverse infinite;
 }
 
 #fun.jumpy {

@@ -12,6 +12,10 @@ function randomNumberInRange(min, max) {
 
 function jumpLink(width, height) {
   setTimeout(() => {
+    // stop the marquee animation if we're going to be
+    // jumping this thing around the screen
+    link.classList.add('jumpy');
+
     Object.assign(link.style, {
       position: 'fixed',
       top: `${randomNumberInRange(12, window.innerHeight - 12)}px`,
@@ -35,5 +39,8 @@ link.addEventListener('mouseover', evt => {
     jumpLink(width, height);
   }
 
-  link.classList.add('jumpy');
 });
+
+link.addEventListener('touchstart', evt => {
+  evt.target.click();
+})
