@@ -1,0 +1,38 @@
+@keyframes marquee {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+body {
+  overflow: hidden;
+}
+
+.pronunciation {
+  font-size: 1.5em;
+  color: red;
+  animation: marquee linear 36s infinite;
+  display: inline-block;
+}
+
+#fun {
+  font-size: 1em;
+  animation: marquee linear 3s reverse infinite;
+}
+
+#fun.jumpy {
+  animation: unset;
+}
+
+#iamdesign {
+  /* this is - 6em so the text on top and bottom show */
+  height: calc(100vh - 6em);
+  max-width: 100%;
+  width: 100%;
+  background-image: url('/iamdesign.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
